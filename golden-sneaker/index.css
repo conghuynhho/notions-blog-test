@@ -40,6 +40,12 @@ main::before {
   z-index: -1;
   animation: wave 8s ease-in-out infinite alternate;
 }
+@media only screen and (max-width: 800px) {
+  main {
+    height: auto;
+    flex-direction: column;
+  }
+}
 
 .card {
   background-color: #fff;
@@ -52,6 +58,11 @@ main::before {
   padding: 0 28px;
   position: relative;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 800px) {
+  .card {
+    margin: 20px auto;
+  }
 }
 .card::before {
   content: "";
