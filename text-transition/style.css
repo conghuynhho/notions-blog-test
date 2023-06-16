@@ -1,0 +1,82 @@
+/* normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+body {
+  margin: 0;
+  background-color: #101820;
+  /* center all child */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* full height */
+  height: 100vh;
+}
+
+h1 {
+  color: #FEE715;
+  font-size: 100px;
+  view-transition-name: huynh;
+}
+
+.no-support {
+  display: none;
+}
+.no-support h1 {
+  font-size: 40px;
+}
+
+/* animation */
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-up {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-out-down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+
+::view-transition-old(huynh) {
+  animation:
+    fade-out 0.5s ease,
+    slide-out-down 0.5s ease,
+}
+
+::view-transition-new(huynh) {
+  animation:
+    fade-in 0.5s ease,
+    slide-in-up 0.5s ease;
+}
